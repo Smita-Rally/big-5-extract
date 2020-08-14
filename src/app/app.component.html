@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="content">
+		<div class="buttons">
+      <button class="btn btn-primary" (click)="startCamera()">Start Camera</button>
+      <input type="file" name="file" id="file" class="inputfile" />
+      <label for="file" class="file-upload">Upload File</label>
+		</div>
+    	<div class="p-1">
+			  <video #video class="vid" autoplay width="300px" height="300px"></video>
+		</div>
+    <button *ngIf="isVideo" class="btn btn-primary" (click)="capture()">Capture Image</button>
+
+		<div class="canvas-wrapper">
+			<canvas #canvas class="vid"></canvas>
+		</div>
+	</div>
+</div>
